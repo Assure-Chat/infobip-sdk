@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['20', '22', '24']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+      - run: npm test
+      - run: npm run typecheck
+
+  spec-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      # Regenerating must be a no-op. If it is not, the vendor spec moved under
+      # the client without anyone regenerating — or someone edited generated
+      # output by hand.
+      - run: npm run generate
+      - name: Fail if generated output is stale
+        run: |
+          if ! git diff --exit-code -- \
+            spec/infobip-messages-api.normalized.json \
+            packages/infobip-types/src/openapi.ts \
+            packages/infobip-types/src/unions.ts; then
+            echo "::error::Generated files are out of date — run 'npm run generate' and commit the result."
+            exit 1
+          fi

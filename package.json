@@ -1,0 +1,41 @@
+{
+  "name": "assure-infobip-sdk",
+  "private": true,
+  "version": "0.0.0",
+  "description": "TypeScript SDK for the Infobip Messages API",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "normalize-spec": "node scripts/normalize-spec.mjs spec/infobip-messages-api.json spec/infobip-messages-api.normalized.json",
+    "generate": "npm run normalize-spec && npm run generate -w @assure/infobip-types",
+    "build": "npm run build -w @assure/infobip-types && npm run build -w @assure/infobip-api && npm run build -w @assure/infobip-webhooks",
+    "typecheck": "npm run build && npm run typecheck --workspaces --if-present && tsc --noEmit -p integration/tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "npm run typecheck",
+    "clean": "rm -rf packages/*/dist packages/*/*.tsbuildinfo",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build && changeset publish",
+    "prepare": "npm run build",
+    "integration:rcs": "npm run build && node --experimental-strip-types integration/rcs-send.ts",
+    "integration:webhooks": "npm run build && node --experimental-strip-types integration/webhook-listen.ts"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@types/node": "^22.10.2",
+    "openapi-typescript": "^7.13.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assure-chat/infobip-sdk.git"
+  }
+}

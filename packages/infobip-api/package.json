@@ -1,0 +1,62 @@
+{
+  "name": "@assure/infobip-api",
+  "version": "0.1.0",
+  "description": "Typed client for the Infobip Messages API — every auth scheme, typed errors, safe retries, and pull-queue draining.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.10"
+  },
+  "files": [
+    "dist",
+    "!dist/*.tsbuildinfo",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [
+    "infobip",
+    "messages-api",
+    "omnichannel",
+    "whatsapp",
+    "rcs",
+    "apple-messages-for-business",
+    "sms",
+    "api-client"
+  ],
+  "dependencies": {
+    "@assure/infobip-types": "0.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assure-chat/infobip-sdk.git",
+    "directory": "packages/infobip-api"
+  },
+  "homepage": "https://github.com/assure-chat/infobip-sdk/tree/main/packages/infobip-api#readme",
+  "bugs": {
+    "url": "https://github.com/assure-chat/infobip-sdk/issues"
+  },
+  "author": "Assure, Inc."
+}

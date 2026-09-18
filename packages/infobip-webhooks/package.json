@@ -1,0 +1,79 @@
+{
+  "name": "@assure/infobip-webhooks",
+  "version": "0.1.0",
+  "description": "Typed receivers and framework adapters for Infobip Messages API webhooks — delivery reports, seen reports, and inbound messages.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.10"
+  },
+  "files": [
+    "dist",
+    "!dist/*.tsbuildinfo",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./express": {
+      "types": "./dist/adapters/express.d.ts",
+      "import": "./dist/adapters/express.js",
+      "require": "./dist/adapters/express.cjs"
+    },
+    "./fastify": {
+      "types": "./dist/adapters/fastify.d.ts",
+      "import": "./dist/adapters/fastify.js",
+      "require": "./dist/adapters/fastify.cjs"
+    },
+    "./fetch": {
+      "types": "./dist/adapters/fetch.d.ts",
+      "import": "./dist/adapters/fetch.js",
+      "require": "./dist/adapters/fetch.cjs"
+    },
+    "./lambda": {
+      "types": "./dist/adapters/lambda.d.ts",
+      "import": "./dist/adapters/lambda.js",
+      "require": "./dist/adapters/lambda.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [
+    "infobip",
+    "webhooks",
+    "messages-api",
+    "delivery-reports",
+    "inbound-messages"
+  ],
+  "dependencies": {
+    "@assure/infobip-types": "0.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assure-chat/infobip-sdk.git",
+    "directory": "packages/infobip-webhooks"
+  },
+  "homepage": "https://github.com/assure-chat/infobip-sdk/tree/main/packages/infobip-webhooks#readme",
+  "bugs": {
+    "url": "https://github.com/assure-chat/infobip-sdk/issues"
+  },
+  "author": "Assure, Inc."
+}

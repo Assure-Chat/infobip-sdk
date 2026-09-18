@@ -1,0 +1,62 @@
+{
+  "name": "@assure/infobip-types",
+  "version": "0.1.0",
+  "description": "TypeScript types generated from the Infobip Messages API OpenAPI spec, plus curated aliases and channel vocabularies.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.10"
+  },
+  "files": [
+    "dist",
+    "!dist/*.tsbuildinfo",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./openapi": {
+      "types": "./dist/openapi.d.ts",
+      "import": "./dist/openapi.js",
+      "require": "./dist/openapi.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "generate": "openapi-typescript ../../spec/infobip-messages-api.normalized.json --output ./src/openapi.ts --root-types --alphabetize && node ../../scripts/generate-unions.mjs ../../spec/infobip-messages-api.normalized.json ./src/unions.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [
+    "infobip",
+    "messages-api",
+    "omnichannel",
+    "openapi",
+    "types"
+  ],
+  "devDependencies": {
+    "openapi-typescript": "^7.13.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assure-chat/infobip-sdk.git",
+    "directory": "packages/infobip-types"
+  },
+  "homepage": "https://github.com/assure-chat/infobip-sdk/tree/main/packages/infobip-types#readme",
+  "bugs": {
+    "url": "https://github.com/assure-chat/infobip-sdk/issues"
+  },
+  "author": "Assure, Inc."
+}
