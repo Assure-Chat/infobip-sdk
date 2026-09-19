@@ -1,5 +1,5 @@
 {
-  "name": "@assure/infobip-webhooks",
+  "name": "@assure-ai/infobip-webhooks",
   "version": "0.1.0",
   "description": "Typed receivers and framework adapters for Infobip Messages API webhooks — delivery reports, seen reports, and inbound messages.",
   "license": "MIT",
@@ -59,7 +59,7 @@
     "inbound-messages"
   ],
   "dependencies": {
-    "@assure/infobip-types": "0.1.0"
+    "@assure-ai/infobip-types": "0.1.0"
   },
   "devDependencies": {
     "tsup": "^8.5.1",

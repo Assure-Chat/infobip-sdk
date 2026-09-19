@@ -9,7 +9,7 @@ import type {
   SendMessagesResponse,
   ValidationBadResponse,
   ValidationOkResponse,
-} from '@assure/infobip-types';
+} from '@assure-ai/infobip-types';
 import { InfobipConfigError } from '../errors.js';
 import { Resource, type RequestOverrides } from './base.js';
 

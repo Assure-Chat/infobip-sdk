@@ -1,13 +1,13 @@
-# @assure/infobip-api
+# @assure-ai/infobip-api
 
 Typed client for the [Infobip Messages API](https://www.infobip.com/docs/api/platform/messages-api).
 
 ```bash
-npm install @assure/infobip-api
+npm install @assure-ai/infobip-api
 ```
 
 ```ts
-import { InfobipClient } from '@assure/infobip-api';
+import { InfobipClient } from '@assure-ai/infobip-api';
 
 const client = new InfobipClient({
   baseUrl: process.env.INFOBIP_BASE_URL!,
@@ -117,7 +117,7 @@ outcome — a replay returns the *next* batch and the first one is lost. Pass
 `replayOnUnknownOutcome: true` where that is acceptable. A `429` or `503` is retried regardless:
 the server refused the request, so nothing was dequeued.
 
-Prefer webhooks (`@assure/infobip-webhooks`) where you can expose a URL. Records are kept 48 hours.
+Prefer webhooks (`@assure-ai/infobip-webhooks`) where you can expose a URL. Records are kept 48 hours.
 
 ## Errors
 

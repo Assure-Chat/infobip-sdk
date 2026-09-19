@@ -12,8 +12,8 @@
   ],
   "scripts": {
     "normalize-spec": "node scripts/normalize-spec.mjs spec/infobip-messages-api.json spec/infobip-messages-api.normalized.json",
-    "generate": "npm run normalize-spec && npm run generate -w @assure/infobip-types",
-    "build": "npm run build -w @assure/infobip-types && npm run build -w @assure/infobip-api && npm run build -w @assure/infobip-webhooks",
+    "generate": "npm run normalize-spec && npm run generate -w @assure-ai/infobip-types",
+    "build": "npm run build -w @assure-ai/infobip-types && npm run build -w @assure-ai/infobip-api && npm run build -w @assure-ai/infobip-webhooks",
     "typecheck": "npm run build && npm run typecheck --workspaces --if-present && tsc --noEmit -p integration/tsconfig.json",
     "test": "vitest run",
     "test:watch": "vitest",

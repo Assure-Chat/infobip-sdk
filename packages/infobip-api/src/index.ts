@@ -1,8 +1,8 @@
 /**
- * `@assure/infobip-api` — a typed client for the Infobip Messages API.
+ * `@assure-ai/infobip-api` — a typed client for the Infobip Messages API.
  *
  * ```ts
- * import { InfobipClient } from '@assure/infobip-api';
+ * import { InfobipClient } from '@assure-ai/infobip-api';
  *
  * const client = new InfobipClient({
  *   baseUrl: process.env.INFOBIP_BASE_URL!,
@@ -109,7 +109,7 @@ export type {
   SendMessagesResponse,
   ValidationBadResponse,
   ValidationOkResponse,
-} from '@assure/infobip-types';
+} from '@assure-ai/infobip-types';
 
 export {
   INBOUND_PULL_CHANNELS,
@@ -121,4 +121,4 @@ export {
   isInboundMessage,
   isMessageStatusGroup,
   isTerminalStatus,
-} from '@assure/infobip-types';
+} from '@assure-ai/infobip-types';

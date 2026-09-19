@@ -1,14 +1,14 @@
-# @assure/infobip-types
+# @assure-ai/infobip-types
 
 Types for the [Infobip Messages API](https://www.infobip.com/docs/api/platform/messages-api).
 
 ```bash
-npm install @assure/infobip-types
+npm install @assure-ai/infobip-types
 ```
 
 Three layers, in increasing order of how much a human touched them.
 
-## 1. `@assure/infobip-types/openapi`
+## 1. `@assure-ai/infobip-types/openapi`
 
 Verbatim `openapi-typescript` output — every schema in the document, reachable as
 `components['schemas'][…]`, plus `paths`, `operations`, and `webhooks`. Regenerated from the
@@ -27,7 +27,7 @@ The spec already states the real shape in each schema's `discriminator.mapping`,
 derived from it rather than hand-written:
 
 ```ts
-import type { MessagesApiMessageBodyUnion } from '@assure/infobip-types';
+import type { MessagesApiMessageBodyUnion } from '@assure-ai/infobip-types';
 // = MessagesApiMessageTextBody | MessagesApiMessageImageBody | … (18 variants)
 ```
 
@@ -37,7 +37,7 @@ Short names for what you actually reach for, with the unions substituted where t
 schemas point at an open parent — which is what makes a message literal writable:
 
 ```ts
-import type { MessageBody, OutboundMessage } from '@assure/infobip-types';
+import type { MessageBody, OutboundMessage } from '@assure-ai/infobip-types';
 
 const body: MessageBody = { type: 'TEXT', text: 'hello' };
 if (body.type === 'IMAGE') body.url;   // narrows
@@ -49,7 +49,7 @@ Exported as runtime values as well as types, because validating a channel at an 
 boundary is common enough that every consumer would otherwise retype the list:
 
 ```ts
-import { OUTBOUND_CHANNELS, INBOUND_PULL_CHANNELS, isOutboundChannel } from '@assure/infobip-types';
+import { OUTBOUND_CHANNELS, INBOUND_PULL_CHANNELS, isOutboundChannel } from '@assure-ai/infobip-types';
 
 isOutboundChannel(input);   // narrows to OutboundChannel
 ```

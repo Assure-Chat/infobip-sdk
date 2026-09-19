@@ -1,5 +1,5 @@
 {
-  "name": "@assure/infobip-api",
+  "name": "@assure-ai/infobip-api",
   "version": "0.1.0",
   "description": "Typed client for the Infobip Messages API — every auth scheme, typed errors, safe retries, and pull-queue draining.",
   "license": "MIT",
@@ -42,7 +42,7 @@
     "api-client"
   ],
   "dependencies": {
-    "@assure/infobip-types": "0.1.0"
+    "@assure-ai/infobip-types": "0.1.0"
   },
   "devDependencies": {
     "tsup": "^8.5.1",

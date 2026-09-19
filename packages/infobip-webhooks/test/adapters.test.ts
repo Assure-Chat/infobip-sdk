@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import type { InboundMessageEvent } from '@assure/infobip-types';
+import type { InboundMessageEvent } from '@assure-ai/infobip-types';
 import type { WebhookContext } from '../src/index.js';
 import { createExpressWebhookHandler } from '../src/adapters/express.js';
 import { createFastifyWebhookHandler } from '../src/adapters/fastify.js';

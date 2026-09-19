@@ -1,4 +1,4 @@
-import type { InboundEvent, InboundMessagesResponse, InboundPullChannel } from '@assure/infobip-types';
+import type { InboundEvent, InboundMessagesResponse, InboundPullChannel } from '@assure-ai/infobip-types';
 import { InfobipConfigError } from '../errors.js';
 import { Resource, type RequestOverrides } from './base.js';
 import { toRequestInit } from './messages.js';
@@ -58,7 +58,7 @@ export interface DrainInboundParams extends Omit<FetchInboundParams, 'limit'> {
  * Unlike reports, the response carries `pendingMessageCount`, so you can tell
  * how much is still queued without emptying it.
  *
- * Prefer an inbound webhook (see `@assure/infobip-webhooks`). Messages are
+ * Prefer an inbound webhook (see `@assure-ai/infobip-webhooks`). Messages are
  * retained for 48 hours.
  */
 export class InboundResource extends Resource {

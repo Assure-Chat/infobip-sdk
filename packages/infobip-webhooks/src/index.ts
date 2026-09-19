@@ -1,8 +1,8 @@
 /**
- * `@assure/infobip-webhooks` — receivers for the three Messages API webhooks.
+ * `@assure-ai/infobip-webhooks` — receivers for the three Messages API webhooks.
  *
  * ```ts
- * import { WebhookReceiver } from '@assure/infobip-webhooks';
+ * import { WebhookReceiver } from '@assure-ai/infobip-webhooks';
  *
  * const receiver = new WebhookReceiver({
  *   kind: 'inbound-message',
@@ -60,4 +60,4 @@ export type {
   InboundMessageWebhookPayload,
   SeenReportWebhookPayload,
   SeenResult,
-} from '@assure/infobip-types';
+} from '@assure-ai/infobip-types';

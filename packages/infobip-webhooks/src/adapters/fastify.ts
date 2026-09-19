@@ -18,7 +18,7 @@ export interface FastifyLikeReply {
  *
  * ```ts
  * import Fastify from 'fastify';
- * import { createFastifyWebhookHandler } from '@assure/infobip-webhooks/fastify';
+ * import { createFastifyWebhookHandler } from '@assure-ai/infobip-webhooks/fastify';
  *
  * const app = Fastify();
  * app.post(

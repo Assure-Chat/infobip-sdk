@@ -7,6 +7,6 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   target: 'es2022',
-  external: ['@assure/infobip-types'],
+  external: ['@assure-ai/infobip-types'],
   outExtension: ({ format }) => ({ js: format === 'cjs' ? '.cjs' : '.js' }),
 });

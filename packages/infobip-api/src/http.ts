@@ -135,7 +135,7 @@ export class HttpClient {
     this.#initialDelayMs = options.retry?.initialDelayMs ?? 500;
     this.#maxDelayMs = options.retry?.maxDelayMs ?? 8_000;
     this.#headers = options.headers ?? {};
-    this.#userAgent = options.userAgent ?? '@assure/infobip-api';
+    this.#userAgent = options.userAgent ?? '@assure-ai/infobip-api';
     this.#onRequest = options.onRequest;
     this.#onResponse = options.onResponse;
   }

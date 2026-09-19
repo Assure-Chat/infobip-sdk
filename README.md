@@ -5,16 +5,16 @@ one API across Apple Messages for Business, RCS, WhatsApp, SMS, Viber, Messenger
 
 | Package | What it is |
 | --- | --- |
-| [`@assure/infobip-types`](packages/infobip-types) | Types generated from the spec, plus the discriminated unions the generator cannot produce and the channel vocabularies as runtime values. |
-| [`@assure/infobip-api`](packages/infobip-api) | The client. All five endpoints, every auth scheme, typed errors, retries that respect what is safe to replay. |
-| [`@assure/infobip-webhooks`](packages/infobip-webhooks) | Receivers for the three webhooks, with Express, Fastify, Fetch, and Lambda adapters. |
+| [`@assure-ai/infobip-types`](packages/infobip-types) | Types generated from the spec, plus the discriminated unions the generator cannot produce and the channel vocabularies as runtime values. |
+| [`@assure-ai/infobip-api`](packages/infobip-api) | The client. All five endpoints, every auth scheme, typed errors, retries that respect what is safe to replay. |
+| [`@assure-ai/infobip-webhooks`](packages/infobip-webhooks) | Receivers for the three webhooks, with Express, Fastify, Fetch, and Lambda adapters. |
 
 ```bash
-npm install @assure/infobip-api
+npm install @assure-ai/infobip-api
 ```
 
 ```ts
-import { InfobipClient } from '@assure/infobip-api';
+import { InfobipClient } from '@assure-ai/infobip-api';
 
 const client = new InfobipClient({
   baseUrl: process.env.INFOBIP_BASE_URL!,   // your account host — see below
@@ -73,7 +73,7 @@ A 401, 429, or 5xx from that route still throws.
 ### 4. Infobip does not sign its webhooks
 
 The spec declares no signature header and no `security` on any of the three webhook
-operations, so there is nothing to verify cryptographically. `@assure/infobip-webhooks`
+operations, so there is nothing to verify cryptographically. `@assure-ai/infobip-webhooks`
 does not pretend otherwise: it checks the credential *you* attached to the callback URL you
 registered — a shared-secret header, Basic auth, or your own predicate. `'none'` is allowed
 but has to be written down, so no endpoint ends up unauthenticated by omission.

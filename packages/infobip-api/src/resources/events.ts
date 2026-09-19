@@ -1,4 +1,4 @@
-import type { components, OutboundEvent, SendEventsRequest, SendMessagesResponse } from '@assure/infobip-types';
+import type { components, OutboundEvent, SendEventsRequest, SendMessagesResponse } from '@assure-ai/infobip-types';
 import { InfobipConfigError } from '../errors.js';
 import { Resource, type RequestOverrides } from './base.js';
 import { toRequestInit } from './messages.js';

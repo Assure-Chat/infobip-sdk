@@ -6,7 +6,7 @@ import type {
   InboundMessageWebhookPayload,
   SeenReportWebhookPayload,
   SeenResult,
-} from '@assure/infobip-types';
+} from '@assure-ai/infobip-types';
 
 /**
  * Which of the three webhooks a delivery is.

@@ -20,7 +20,7 @@ export type ExpressLikeNext = (error?: unknown) => void;
  *
  * ```ts
  * import express from 'express';
- * import { createExpressWebhookHandler } from '@assure/infobip-webhooks/express';
+ * import { createExpressWebhookHandler } from '@assure-ai/infobip-webhooks/express';
  *
  * const app = express();
  * app.use(express.json());

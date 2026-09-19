@@ -1,4 +1,4 @@
-import type { DeliveryReportsResponse, DeliveryResult, ReportChannel } from '@assure/infobip-types';
+import type { DeliveryReportsResponse, DeliveryResult, ReportChannel } from '@assure-ai/infobip-types';
 import { InfobipConfigError } from '../errors.js';
 import { Resource, type RequestOverrides } from './base.js';
 import { toRequestInit } from './messages.js';
@@ -61,7 +61,7 @@ export interface DrainReportsParams extends Omit<FetchReportsParams, 'limit'> {
  * - **Only one consumer per account can poll.** Two pollers split the stream
  *   between them, each seeing an arbitrary half.
  *
- * Prefer a delivery-report webhook (see `@assure/infobip-webhooks`); this route
+ * Prefer a delivery-report webhook (see `@assure-ai/infobip-webhooks`); this route
  * exists for when you cannot expose one. Reports are retained for 48 hours.
  */
 export class ReportsResource extends Resource {

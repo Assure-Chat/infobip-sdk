@@ -5,7 +5,7 @@ import type {
   InboundMessageWebhookPayload,
   SeenReportWebhookPayload,
   SeenResult,
-} from '@assure/infobip-types';
+} from '@assure-ai/infobip-types';
 import { WebhookRejectionError } from './errors.js';
 import { detectKind, type WebhookDelivery, type WebhookKind } from './events.js';
 

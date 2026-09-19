@@ -5,7 +5,7 @@ import { WebhookReceiver, type WebhookReceiverOptions } from '../receiver.js';
  * speaks Fetch: Cloudflare Workers, Deno, Bun, Next.js route handlers, Hono.
  *
  * ```ts
- * import { createFetchWebhookHandler } from '@assure/infobip-webhooks/fetch';
+ * import { createFetchWebhookHandler } from '@assure-ai/infobip-webhooks/fetch';
  *
  * const handler = createFetchWebhookHandler({
  *   kind: 'delivery-report',

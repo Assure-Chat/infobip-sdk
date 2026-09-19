@@ -1,7 +1,7 @@
 ---
-'@assure/infobip-types': minor
-'@assure/infobip-api': minor
-'@assure/infobip-webhooks': minor
+'@assure-ai/infobip-types': minor
+'@assure-ai/infobip-api': minor
+'@assure-ai/infobip-webhooks': minor
 ---
 
 First release: typed client, generated types with real discriminated unions, and webhook

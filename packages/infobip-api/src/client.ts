@@ -77,7 +77,7 @@ export interface InfobipClientOptions {
  * Client for the Infobip Messages API.
  *
  * ```ts
- * import { InfobipClient } from '@assure/infobip-api';
+ * import { InfobipClient } from '@assure-ai/infobip-api';
  *
  * const client = new InfobipClient({
  *   baseUrl: process.env.INFOBIP_BASE_URL!,

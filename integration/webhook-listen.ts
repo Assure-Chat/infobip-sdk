@@ -15,7 +15,7 @@
  * Run: `npm run integration:webhooks`
  */
 import { createServer } from 'node:http';
-import { WebhookReceiver, type WebhookKind } from '@assure/infobip-webhooks';
+import { WebhookReceiver, type WebhookKind } from '@assure-ai/infobip-webhooks';
 import { loadEnv, optional } from './env.ts';
 
 loadEnv();

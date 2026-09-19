@@ -19,7 +19,7 @@ export interface LambdaLikeResult {
  * Function URL.
  *
  * ```ts
- * import { createLambdaWebhookHandler } from '@assure/infobip-webhooks/lambda';
+ * import { createLambdaWebhookHandler } from '@assure-ai/infobip-webhooks/lambda';
  *
  * export const handler = createLambdaWebhookHandler({
  *   kind: 'inbound-message',

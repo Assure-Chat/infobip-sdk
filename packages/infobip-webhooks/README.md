@@ -1,14 +1,14 @@
-# @assure/infobip-webhooks
+# @assure-ai/infobip-webhooks
 
 Receivers for the three [Infobip Messages API](https://www.infobip.com/docs/api/platform/messages-api)
 webhooks: delivery reports, seen reports, and inbound messages.
 
 ```bash
-npm install @assure/infobip-webhooks
+npm install @assure-ai/infobip-webhooks
 ```
 
 ```ts
-import { createExpressWebhookHandler } from '@assure/infobip-webhooks/express';
+import { createExpressWebhookHandler } from '@assure-ai/infobip-webhooks/express';
 
 app.post(
   '/webhooks/infobip/inbound',
@@ -99,10 +99,10 @@ parts. Override with `deduplicationKey`.
 ## Adapters
 
 ```ts
-import { createExpressWebhookHandler } from '@assure/infobip-webhooks/express';
-import { createFastifyWebhookHandler } from '@assure/infobip-webhooks/fastify';
-import { createFetchWebhookHandler }   from '@assure/infobip-webhooks/fetch';   // Workers, Deno, Bun, Next
-import { createLambdaWebhookHandler }  from '@assure/infobip-webhooks/lambda';  // API Gateway, Function URLs
+import { createExpressWebhookHandler } from '@assure-ai/infobip-webhooks/express';
+import { createFastifyWebhookHandler } from '@assure-ai/infobip-webhooks/fastify';
+import { createFetchWebhookHandler }   from '@assure-ai/infobip-webhooks/fetch';   // Workers, Deno, Bun, Next
+import { createLambdaWebhookHandler }  from '@assure-ai/infobip-webhooks/lambda';  // API Gateway, Function URLs
 ```
 
 A JSON body parser upstream is fine. Nothing here depends on the exact request bytes — that

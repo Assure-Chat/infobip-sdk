@@ -13,8 +13,8 @@
  * Run: `npm run integration:rcs -- "optional message text"`
  * Add `--dry-run` to stop after stage 1.
  */
-import { InfobipClient, isInfobipApiError, isTerminalStatus } from '@assure/infobip-api';
-import type { AnyOutboundMessage, DeliveryResult } from '@assure/infobip-api';
+import { InfobipClient, isInfobipApiError, isTerminalStatus } from '@assure-ai/infobip-api';
+import type { AnyOutboundMessage, DeliveryResult } from '@assure-ai/infobip-api';
 import { fingerprint, loadEnv, optional, required } from './env.ts';
 
 loadEnv();

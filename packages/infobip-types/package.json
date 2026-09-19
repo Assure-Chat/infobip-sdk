@@ -1,5 +1,5 @@
 {
-  "name": "@assure/infobip-types",
+  "name": "@assure-ai/infobip-types",
   "version": "0.1.0",
   "description": "TypeScript types generated from the Infobip Messages API OpenAPI spec, plus curated aliases and channel vocabularies.",
   "license": "MIT",

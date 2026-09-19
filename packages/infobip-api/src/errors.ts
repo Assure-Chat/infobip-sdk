@@ -1,4 +1,4 @@
-import type { ApiErrorViolation } from '@assure/infobip-types';
+import type { ApiErrorViolation } from '@assure-ai/infobip-types';
 
 /** Base class for every error this SDK throws. */
 export class InfobipError extends Error {

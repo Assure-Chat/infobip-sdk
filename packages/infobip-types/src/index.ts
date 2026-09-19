@@ -1,5 +1,5 @@
 /**
- * `@assure/infobip-types` — the Infobip Messages API, as TypeScript.
+ * `@assure-ai/infobip-types` — the Infobip Messages API, as TypeScript.
  *
  * Three layers, in increasing order of how much a human touched them:
  *
